@@ -29,9 +29,9 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-gray-50 font-sans">
           <Header />
-          <main className="pb-20 md:pb-8">
+          <main className="pb-20 md:pb-8 min-h-[calc(100vh-80px)] overflow-x-hidden">
             <Router />
           </main>
           <MobileNav />

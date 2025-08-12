@@ -111,3 +111,71 @@
 .text-secondary-dark {
   color: hsl(218 19% 27%);
 }
+
+/* Mobile-first optimizations */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Mobile layout optimizations */
+@media (max-width: 768px) {
+  .max-w-7xl {
+    max-width: 100% !important;
+  }
+  
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Improve touch targets */
+  button, .btn, [role="button"], .cursor-pointer {
+    min-height: 44px;
+  }
+  
+  /* Better card spacing on mobile */
+  .mobile-card-spacing > * + * {
+    margin-top: 1rem;
+  }
+  
+  /* Hide desktop-only elements */
+  .desktop-only {
+    display: none !important;
+  }
+  
+  /* Larger text for mobile readability */
+  .mobile-text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  
+  /* Better scrolling on iOS */
+  .scrollable {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Hide scrollbars but keep functionality */
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Optimize grid for mobile */
+  .mobile-grid-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  
+  .mobile-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
